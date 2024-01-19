@@ -1,0 +1,526 @@
+[
+    {
+        "mt": "travu",
+        "en": "beam"
+    },
+    {
+        "mt": "omnibus",
+        "en": "omnibus"
+    },
+    {
+        "mt": "ċesarja",
+        "en": "caesarian"
+    },
+    {
+        "mt": "vajlora",
+        "en": "ferrule"
+    },
+    {
+        "mt": "ekżema",
+        "en": "eczema"
+    },
+    {
+        "mt": "vista",
+        "en": "visit"
+    },
+    {
+        "mt": "xedd",
+        "en": "shoe"
+    },
+    {
+        "mt": "astenja",
+        "en": "asthenia"
+    },
+    {
+        "mt": "ħabel",
+        "en": "string"
+    },
+    {
+        "mt": "barbazzal",
+        "en": "curb"
+    },
+    {
+        "mt": "iperinflazzjoni",
+        "en": "hyperinflation"
+    },
+    {
+        "mt": "fistla",
+        "en": "fistula"
+    },
+    {
+        "mt": "ġir",
+        "en": "lime"
+    },
+    {
+        "mt": "ħajt",
+        "en": "thread"
+    },
+    {
+        "mt": "qgħad",
+        "en": "unemployment"
+    },
+    {
+        "mt": "xatka",
+        "en": "sciatica"
+    },
+    {
+        "mt": "ganċ",
+        "en": "hook"
+    },
+    {
+        "mt": "ormon",
+        "en": "hormone"
+    },
+    {
+        "mt": "irrigat",
+        "en": "striped"
+    },
+    {
+        "mt": "dħul",
+        "en": "revenue"
+    },
+    {
+        "mt": "konsulent",
+        "en": "consultant"
+    },
+    {
+        "mt": "apprezzament",
+        "en": "appreciation"
+    },
+    {
+        "mt": "kartiera",
+        "en": "wallet"
+    },
+    {
+        "mt": "għerq",
+        "en": "ligament"
+    },
+    {
+        "mt": "mgħażqa",
+        "en": "spade"
+    },
+    {
+        "mt": "sokra",
+        "en": "lock"
+    },
+    {
+        "mt": "dublett",
+        "en": "skirt"
+    },
+    {
+        "mt": "maħanqa",
+        "en": "collar"
+    },
+    {
+        "mt": "buġija",
+        "en": "candlestick"
+    },
+    {
+        "mt": "musmar",
+        "en": "nail"
+    },
+    {
+        "mt": "sperma",
+        "en": "sperm"
+    },
+    {
+        "mt": "ringrazzjament",
+        "en": "thanksgiving"
+    },
+    {
+        "mt": "konċepiment",
+        "en": "conception"
+    },
+    {
+        "mt": "puplesija",
+        "en": "stroke"
+    },
+    {
+        "mt": "introjtu",
+        "en": "revenue"
+    },
+    {
+        "mt": "kappestru",
+        "en": "halter"
+    },
+    {
+        "mt": "termometru",
+        "en": "thermometer"
+    },
+    {
+        "mt": "korra",
+        "en": "injured"
+    },
+    {
+        "mt": "tewmi",
+        "en": "twin"
+    },
+    {
+        "mt": "pilastru",
+        "en": "pillar"
+    },
+    {
+        "mt": "xambrella",
+        "en": "architrave"
+    },
+    {
+        "mt": "ħosba",
+        "en": "measles"
+    },
+    {
+        "mt": "baklu",
+        "en": "crosier"
+    },
+    {
+        "mt": "flus",
+        "en": "money"
+    },
+    {
+        "mt": "fallakka",
+        "en": "plank"
+    },
+    {
+        "mt": "dardir",
+        "en": "nausea"
+    },
+    {
+        "mt": "bluża",
+        "en": "overall"
+    },
+    {
+        "mt": "sidra",
+        "en": "brisket"
+    },
+    {
+        "mt": "ġakketta",
+        "en": "jacket"
+    },
+    {
+        "mt": "azzjonist",
+        "en": "shareholder"
+    },
+    {
+        "mt": "għasfur",
+        "en": "frog"
+    },
+    {
+        "mt": "għażla",
+        "en": "choice"
+    },
+    {
+        "mt": "għajn",
+        "en": "eye"
+    },
+    {
+        "mt": "lama",
+        "en": "blade"
+    },
+    {
+        "mt": "kartell",
+        "en": "cartel"
+    },
+    {
+        "mt": "marloċċ",
+        "en": "handle"
+    },
+    {
+        "mt": "żvalutar",
+        "en": "devaluation"
+    },
+    {
+        "mt": "ċappetta",
+        "en": "hinge"
+    },
+    {
+        "mt": "respirator",
+        "en": "respirator"
+    },
+    {
+        "mt": "kurpett",
+        "en": "corset"
+    },
+    {
+        "mt": "xedda",
+        "en": "constipation"
+    },
+    {
+        "mt": "informali",
+        "en": "informal"
+    },
+    {
+        "mt": "truxija",
+        "en": "deafness"
+    },
+    {
+        "mt": "menstruwazzjoni",
+        "en": "menstruation"
+    },
+    {
+        "mt": "union",
+        "en": "union"
+    },
+    {
+        "mt": "entablatura",
+        "en": "entablature"
+    },
+    {
+        "mt": "lanżit",
+        "en": "bristle"
+    },
+    {
+        "mt": "vakant",
+        "en": "vacant"
+    },
+    {
+        "mt": "lima",
+        "en": "file"
+    },
+    {
+        "mt": "direttur",
+        "en": "director"
+    },
+    {
+        "mt": "spag",
+        "en": "string"
+    },
+    {
+        "mt": "tajjar",
+        "en": "cotton"
+    },
+    {
+        "mt": "mastizz",
+        "en": "solid"
+    },
+    {
+        "mt": "but",
+        "en": "pocket"
+    },
+    {
+        "mt": "dawra",
+        "en": "feed"
+    },
+    {
+        "mt": "reġjun",
+        "en": "region"
+    },
+    {
+        "mt": "turnavit",
+        "en": "screwdriver"
+    },
+    {
+        "mt": "fertilità",
+        "en": "fertility"
+    },
+    {
+        "mt": "karettun",
+        "en": "cart"
+    },
+    {
+        "mt": "isfar",
+        "en": "chestnut"
+    },
+    {
+        "mt": "witta",
+        "en": "smoothing"
+    },
+    {
+        "mt": "għoli",
+        "en": "height"
+    },
+    {
+        "mt": "bitum",
+        "en": "bitumen"
+    },
+    {
+        "mt": "maħta",
+        "en": "mucus"
+    },
+    {
+        "mt": "katarretta",
+        "en": "cataract"
+    },
+    {
+        "mt": "mezza",
+        "en": "plane"
+    },
+    {
+        "mt": "spiritwalità",
+        "en": "spirituality"
+    },
+    {
+        "mt": "abort",
+        "en": "abortion"
+    },
+    {
+        "mt": "plywood",
+        "en": "plywood"
+    },
+    {
+        "mt": "debba",
+        "en": "mare"
+    },
+    {
+        "mt": "appendiċite",
+        "en": "appendix"
+    },
+    {
+        "mt": "unjoni",
+        "en": "union"
+    },
+    {
+        "mt": "bir",
+        "en": "well"
+    },
+    {
+        "mt": "kolla",
+        "en": "glue"
+    },
+    {
+        "mt": "telexogħol",
+        "en": "teleworking"
+    },
+    {
+        "mt": "remettar",
+        "en": "vomiting"
+    },
+    {
+        "mt": "ħuttafa",
+        "en": "eclampsia"
+    },
+    {
+        "mt": "valur",
+        "en": "value"
+    },
+    {
+        "mt": "inforra",
+        "en": "lining"
+    },
+    {
+        "mt": "markatura",
+        "en": "marka"
+    },
+    {
+        "mt": "rakkmu",
+        "en": "embroidery"
+    },
+    {
+        "mt": "munzell",
+        "en": "heap"
+    },
+    {
+        "mt": "deprezzament",
+        "en": "depreciation"
+    },
+    {
+        "mt": "verniċ",
+        "en": "varnish"
+    },
+    {
+        "mt": "serratura",
+        "en": "lock"
+    },
+    {
+        "mt": "menopawsa",
+        "en": "menopause"
+    },
+    {
+        "mt": "bradella",
+        "en": "dais"
+    },
+    {
+        "mt": "denb",
+        "en": "tail"
+    },
+    {
+        "mt": "magħżul",
+        "en": "elect"
+    },
+    {
+        "mt": "flanella",
+        "en": "flannel"
+    },
+    {
+        "mt": "ċurkett",
+        "en": "ring"
+    },
+    {
+        "mt": "tnalja",
+        "en": "pliers"
+    },
+    {
+        "mt": "kera",
+        "en": "rent"
+    },
+    {
+        "mt": "ħajta",
+        "en": "thread"
+    },
+    {
+        "mt": "defiċit",
+        "en": "deficit"
+    },
+    {
+        "mt": "felula",
+        "en": "wart"
+    },
+    {
+        "mt": "koxxa",
+        "en": "jamb"
+    },
+    {
+        "mt": "feles",
+        "en": "wedge"
+    },
+    {
+        "mt": "superjur",
+        "en": "superior"
+    },
+    {
+        "mt": "inċertezza",
+        "en": "uncertainty"
+    },
+    {
+        "mt": "ċanfrin",
+        "en": "chamfer"
+    },
+    {
+        "mt": "musmar",
+        "en": "pimple"
+    },
+    {
+        "mt": "sieq",
+        "en": "legs"
+    },
+    {
+        "mt": "lsien",
+        "en": "tail"
+    },
+    {
+        "mt": "pora",
+        "en": "pores"
+    },
+    {
+        "mt": "sogħla",
+        "en": "cough"
+    },
+    {
+        "mt": "takkalja",
+        "en": "garter"
+    },
+    {
+        "mt": "kolera",
+        "en": "cholera"
+    },
+    {
+        "mt": "baldakkin",
+        "en": "baldachin"
+    },
+    {
+        "mt": "purtella",
+        "en": "shutter"
+    },
+    {
+        "mt": "pedestall",
+        "en": "pedestal"
+    }
+]
