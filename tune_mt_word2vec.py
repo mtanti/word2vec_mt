@@ -183,6 +183,7 @@ def main(
     parser.add_argument('--skip_to_iter', required=False, type=int, default=None)
     args = parser.parse_args()
     print('Arguments used:', args)
+    os.makedirs('model', exist_ok=True)
 
     print('Tuning Maltese word2vec')
 
