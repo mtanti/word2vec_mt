@@ -3,13 +3,13 @@ x
 '''
 import os
 import timeit
-import random
+import json
 from typing import Optional, Callable, Any
 from gensim.models import KeyedVectors
 from gensim.models.callbacks import CallbackAny2Vec
 import gensim.models
 import sklearn.linear_model
-from hyperparameter_config import SearchSpace, Hyperparameters
+from hyperparameter_config import Hyperparameters
 
 
 #########################################
@@ -172,7 +172,6 @@ def search_hyperparams(
     dev_mt: list[str],
     dev_en: list[str],
     wordvecs_en: KeyedVectors,
-    num_tuning_iters: int,
     listener: SearchListener = SearchListener(),
     seed: int = 0,
     workers: int = 1,
@@ -181,56 +180,57 @@ def search_hyperparams(
     '''
     x
     '''
-    rng = random.Random(seed)
-    seen = set()
-    for i in range(1, num_tuning_iters + 1):
-        if skip_to_iter is not None and i < skip_to_iter:
-            continue
-        while True:
-            hyperparams = Hyperparameters(
-                gensim_window=rng.choice(SearchSpace.gensim_window),
-                gensim_sg=rng.choice(SearchSpace.gensim_sg),
-                gensim_negative=rng.choice(SearchSpace.gensim_negative),
-                gensim_sample=rng.choice(SearchSpace.gensim_sample),
-                gensim_epochs=rng.choice(SearchSpace.gensim_epochs),
-                sklearn_fit_intercept=rng.choice(SearchSpace.sklearn_fit_intercept),
-                sklearn_alpha=rng.choice(SearchSpace.sklearn_alpha),
-            )
-            tuple_hyperparams = tuple(hyperparams)
-            if tuple_hyperparams not in seen:
-                seen.add(tuple_hyperparams)
-                break
+    with open(
+        os.path.join('hyperparameter_list', 'hyperparameter_list.jsonl'),
+        'r', encoding='utf-8',
+    ) as f_in:
+        for (i, line) in enumerate(f_in, 1):
+            if skip_to_iter is not None and i < skip_to_iter:
+                continue
 
-        listener.iteration_start(i, hyperparams, hyperparams.gensim_epochs)
-        start_time = timeit.default_timer()
+            hyperparams = Hyperparameters(**json.loads(line))
 
-        error_msg: Optional[str] = None
-        try:
-            (model_mt, translator) = train_model(
-                train_mt,
-                train_en,
-                wordvecs_en,
-                hyperparams,
-                seed,
-                workers,
-                listener.epoch_end,
-            )
-            mean_cosine = eval_model(
-                model_mt,
-                translator,
-                dev_mt,
-                dev_en,
-                wordvecs_en,
-            )
-        except ValueError as ex:
-            error_msg = str(ex)
+            listener.iteration_start(i, hyperparams, hyperparams.gensim_epochs)
+            start_time = timeit.default_timer()
 
-        duration = timeit.default_timer() - start_time
-        if error_msg is None:
-            listener.iteration_end(
-                i, hyperparams, model_mt, translator, mean_cosine, duration
-            )
-        else:
-            listener.iteration_fail(
-                i, hyperparams, duration, error_msg
-            )
+            error_msg: Optional[str] = None
+            mean_cosine: Optional[float] = None
+            try:
+                (model_mt, translator) = train_model(
+                    train_mt,
+                    train_en,
+                    wordvecs_en,
+                    hyperparams,
+                    seed,
+                    workers,
+                    listener.epoch_end,
+                )
+                mean_cosine = eval_model(
+                    model_mt,
+                    translator,
+                    dev_mt,
+                    dev_en,
+                    wordvecs_en,
+                )
+            except ValueError as ex:
+                error_msg = str(ex)
+
+            with open(
+                os.path.join('hyperparameter_list', 'mean_cosines_list.jsonl'),
+                'a', encoding='utf-8',
+            ) as f_out:
+                if mean_cosine is None:
+                    print('', file=f_out)
+                else:
+                    print(json.dumps(mean_cosine), file=f_out)
+
+            duration = timeit.default_timer() - start_time
+            if error_msg is None:
+                assert mean_cosine is not None
+                listener.iteration_end(
+                    i, hyperparams, model_mt, translator, mean_cosine, duration
+                )
+            else:
+                listener.iteration_fail(
+                    i, hyperparams, duration, error_msg
+                )

@@ -104,7 +104,7 @@ class Listener(model_trainer.SearchListener):
 
         with open('tune_log.txt', 'a', encoding='utf-8') as f:
             print(f'mean cosine: {mean_cosine}', file=f)
-            print(f'new best? {mean_cosine > self.best_mean_cosine}', file=f)
+            print(f'new best? {new_best}', file=f)
             print(f'duration: {duration}', file=f)
             print('', file=f)
 
@@ -178,7 +178,6 @@ def main(
     x
     '''
     parser = argparse.ArgumentParser()
-    parser.add_argument('--num_tuning_iters', required=False, type=int, default=100)
     parser.add_argument('--seed', required=False, type=int, default=0)
     parser.add_argument('--workers', required=False, type=int, default=1)
     parser.add_argument('--skip_to_iter', required=False, type=int, default=None)
@@ -212,7 +211,6 @@ def main(
         dev_mt,
         dev_en,
         wordvecs_en,
-        args.num_tuning_iters,
         Listener(best_mean_cosine),
         seed=args.seed,
         workers=args.workers,

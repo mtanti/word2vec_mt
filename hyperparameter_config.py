@@ -3,55 +3,20 @@ x
 '''
 import pydantic
 
-class SearchSpace:
+# https://radimrehurek.com/gensim/models/word2vec.html#gensim.models.word2vec.Word2Vec
+
+class SearchSpace(pydantic.BaseModel):
     '''
-    https://radimrehurek.com/gensim/models/word2vec.html#gensim.models.word2vec.Word2Vec
+    x
     '''
+    gensim_window: list[int]
+    gensim_sg: list[int]
+    gensim_negative: list[int]
+    gensim_sample: list[float]
+    gensim_epochs: list[int]
+    sklearn_fit_intercept: list[bool]
+    sklearn_alpha: list[float]
 
-    gensim_window = [
-        5,
-        10,
-    ]
-
-    gensim_sg = [
-        0,
-        1,
-    ]
-
-    gensim_negative = [
-        5,
-        10,
-        15,
-        20,
-    ]
-
-    gensim_sample = [
-        0.0,
-        1e-1,
-        1e-2,
-        1e-3,
-        1e-4,
-        1e-5,
-    ]
-
-    gensim_epochs = [
-        2,
-        5,
-    ]
-
-    sklearn_fit_intercept = [
-        True,
-        False,
-    ]
-
-    sklearn_alpha = [
-        1e-5,
-        1e-4,
-        1e-3,
-        1e-2,
-        1e-1,
-        1e0,
-    ]
 
 class Hyperparameters(pydantic.BaseModel):
     '''
@@ -64,3 +29,11 @@ class Hyperparameters(pydantic.BaseModel):
     gensim_epochs: int
     sklearn_fit_intercept: bool
     sklearn_alpha: float
+
+
+class HyperparameterSearchConfig(pydantic.BaseModel):
+    '''
+    x
+    '''
+    num_iters: int
+    space: SearchSpace

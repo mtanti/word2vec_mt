@@ -1,0 +1,1 @@
+{"num_iters":50,"space":{"gensim_window": [5, 10],"gensim_sg":[0, 1],"gensim_negative":[5, 10, 15, 20],"gensim_sample":[0.0, 1e-1, 1e-2, 1e-3, 1e-4, 1e-5],"gensim_epochs":[1, 2, 3, 4, 5],"sklearn_fit_intercept":[true, false],"sklearn_alpha":[1e-3, 1e-2, 1e-1, 1.0, 2.0]}}
