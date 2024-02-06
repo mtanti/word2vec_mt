@@ -141,10 +141,10 @@ class Listener(model_trainer.SearchListener):
 
         with open(os.path.join('data', 'mt_vocab.txt'), 'r', encoding='utf-8') as f:
             vocab_mt = f.read().strip().split('\n')
-        transformed_wordvecs_mt = [
+        transformed_wordvecs_mt = np.array([
             translator.predict(model_mt.wv[word][None, :])[0, :]
             for word in vocab_mt
-        ]
+        ], np.float32)
         np.save(os.path.join('model', 'mt2en_projected_word2vec.npy'), transformed_wordvecs_mt)
 
         wordvecs_en = KeyedVectors.load(os.path.join('data', 'word2vec_en.wordvectors'))
@@ -165,7 +165,7 @@ class Listener(model_trainer.SearchListener):
                 for hyp_word_mt in wordvecs_mt.similar_by_key(word_mt, topn=5):
                     print(f'- {hyp_word_mt}', file=f)
                 print('In English:', file=f)
-                wordvec_mt = transformed_wordvecs_mt[word2index_mt[word_mt]]
+                wordvec_mt = transformed_wordvecs_mt[word2index_mt[word_mt], :]
                 for hyp_word_en in wordvecs_en.similar_by_vector(wordvec_mt, topn=5):
                     print(f'- {hyp_word_en}', file=f)
                 print('', file=f)
