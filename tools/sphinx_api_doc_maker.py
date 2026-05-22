@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2024 Marc Tanti
+# Copyright © 2026 Marc Tanti
 #
 # This file is part of word2vec_mt project.
 '''
@@ -97,7 +97,6 @@ def generate(
 .. automodule:: {fully_qualified_code_name}
     :members:
     :show-inheritance:
-    :inherited-members:
     :special-members:
     :exclude-members: __weakref__
 ''', file=f)
@@ -134,7 +133,6 @@ Welcome to word2vec_mt's documentation!
 .. toctree::
    :maxdepth: 1
 
-   usage
    api
 
 Indices and tables
@@ -144,19 +142,6 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 ''', file=f)
-
-    try:
-        with open(
-            os.path.join(doc_dir, 'usage.rst'),
-            'x', encoding='utf-8', newline='\n',
-        ) as f:
-            print('''\
-User documentation
-==================
-
-''', file=f)
-    except FileExistsError:
-        pass
 
     with open(
         os.path.join(doc_dir, 'api.rst'),

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright © 2024 Marc Tanti
+# Copyright © 2026 Marc Tanti
 #
 # This file is part of word2vec_mt project.
 '''

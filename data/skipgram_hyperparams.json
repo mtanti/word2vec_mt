@@ -1,0 +1,30 @@
+{
+    "embedding_size": 300,
+    "init_stddev": [
+        1e-1,
+        1e-2,
+        1e-3
+    ],
+    "learning_rate": [
+        1e-2,
+        1e-3,
+        1e-4
+    ],
+    "max_epochs": 30,
+    "radius": [
+        5
+    ],
+    "neg_sample_ratio": [
+        5,
+        10
+    ],
+    "superbatch_size": 312499995,
+    "batch_size": 1872452,
+    "patience": 5,
+    "tuning_trials": 10,
+    "device": "cuda:1",
+    "seed": [
+        0,
+        1
+    ]
+}

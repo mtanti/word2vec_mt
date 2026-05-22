@@ -1,0 +1,15 @@
+corpus_mt.txt
+linear_best_hyperparams.json
+linear_hyperparams.csv
+linear_hyperparams.sqlite3
+linear_model.pt
+proccorpus_mt.hdf5
+skipgram_best_hyperparams.json
+skipgram_hyperparams.csv
+skipgram_hyperparams.sqlite3
+skipgram_model.pt
+synonyms_mt.json
+token_freqs_mt.json
+translations_mten.json
+vocab_en.txt
+word2vec_en.npy

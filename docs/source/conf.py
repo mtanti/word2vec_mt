@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'word2vec_mt'
-copyright = '2024, Marc Tanti'
+copyright = '2026, Marc Tanti'
 author = 'Marc Tanti'
 
 # -- General configuration ---------------------------------------------------
